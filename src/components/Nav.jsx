@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const nav = () => {
     return <div>
@@ -9,10 +9,18 @@ const nav = () => {
                 e.isActive ? "font-bold" : ""].join(" ")
             }} to="/">Home</NavLink>
 
-            <NavLink to="/user"> {(e) => {
-                return <span className={[e.isActive ? "text-red-500" : "",
-                e.isActive ? "text-bold" : ""].join(" ")}>User</span>
-            }}
+            <NavLink to="/user">
+                {(e) => {
+                    return (
+                        <span
+                            className={[
+                                e.isActive ? "text-red-800" : "",
+                                e.isActive ? "font-bold" : ""].join(" ")}
+                        >User
+
+                        </span>
+                    );
+                }}
             </NavLink>
             <NavLink style={(e) => { return { color: e.isActive ? "#f0ab8d" : "", fontWeight: e.isActive ? "bold" : "" }; }} to="/about">About</NavLink>
 
