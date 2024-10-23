@@ -8,10 +8,12 @@ const nav = () => {
                 return [e.isActive ? "text-red-500" : "",
                 e.isActive ? "font-bold" : ""].join(" ")
             }} to="/">Home</NavLink>
-            <NavLink className={(e) => {
-                return [e.isActive ? "text-red-500" : "",
-                e.isActive ? "text-bold" : ""].join(" ")
-            }} to="/user">User</NavLink>
+
+            <NavLink to="/user"> {(e) => {
+                return <span className={[e.isActive ? "text-red-500" : "",
+                e.isActive ? "text-bold" : ""].join(" ")}>User</span>
+            }}
+            </NavLink>
             <NavLink style={(e) => { return { color: e.isActive ? "#f0ab8d" : "", fontWeight: e.isActive ? "bold" : "" }; }} to="/about">About</NavLink>
 
         </nav></div >;
