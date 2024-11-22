@@ -4,21 +4,22 @@ const nav = () => {
     return <div>
         <nav className="flex gap-20 justify-center py-1  text-white bg-white border-gray-200 dark:bg-gray-900 ">
 
-            <NavLink className={(e) => {
-                return [e.isActive ? "text-red-500" : "",
-                e.isActive ? "font-bold" : ""].join(" ")
-            }} to="/">Home</NavLink>
+            <NavLink
+                className={(e) => {
+                    return [e.isActive ? "text-red-500" : "",
+                    e.isActive ? "font-bold" : ""].join(" ")
+                }}
+                to="/">
+                Home
+            </NavLink>
 
             <NavLink to="/user">
                 {(e) => {
                     return (
-                        <span
-                            className={[
-                                e.isActive ? "text-red-800" : "",
-                                e.isActive ? "font-bold" : ""].join(" ")}
-                        >User
-
-                        </span>
+                        <span className={[
+                            e.isActive ? "text-red-800" : "",
+                            e.isActive ? "font-bold" : ""].join(" ")}
+                        >User</span>
                     );
                 }}
             </NavLink>
